@@ -16,7 +16,7 @@ interface Props {
   href?: string;
   description: string;
   dates: string;
-  tags: readonly (string | undefined)[]; // Allow undefined
+  tags: readonly (string | undefined)[]; 
   link?: string;
   image?: string;
   video?: string;

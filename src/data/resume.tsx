@@ -97,7 +97,7 @@ export const DATA = {
     {
       title: "Valentine's Website",
       href: "https://for-vera.vercel.app",
-      dates: "Feb 2024",
+      dates: "Feb 2025",
       active: true,
       description:
         "Made a website to celebrate spending Valentine's with my girlfriend. Wanted to be quirky so yeah.",
@@ -121,7 +121,7 @@ export const DATA = {
     {
       title: "Shrimp Sense",
       href: "https://github.com/fynn07/white-leg-shrimp-management",
-      dates: "Jan 2024 - Present",
+      dates: "Jan 2025 - Present",
       active: true,
       description:
         "Monitor, predict, and optimize shrimp farming with data-driven insights and real-time analytics. ShrimpSense ensures optimal water quality, disease prevention, and farm efficiency using AI-powered technology.",
@@ -153,7 +153,7 @@ export const DATA = {
     {
       title: "HealthBook - Website",
       href: "https://github.com/fynn07/healthcare-management-system",
-      dates: "October 2023 - December 2023",
+      dates: "October 2024 - December 2024",
       active: true,
       description:
         "Seamlessly manage medical records and healthcare identification using a powerful digital platform designed for patients, healthcare providers, and hospital administrators.",
