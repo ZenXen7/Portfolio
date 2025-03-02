@@ -20,8 +20,12 @@ export const DATA = {
     "Node.js",
     "Python",
     "PostgreSQL",
+    "SQL",
+    "Appwrite",
+    "Firebase",
+    "Supabase",
     "Docker",
-    "AI/ML",
+    "Javascript",
     "Java",
     "C++",
     "C",
@@ -96,7 +100,7 @@ export const DATA = {
   projects: [
     {
       title: "Valentine's Website",
-      href: "https://for-vera.vercel.app",
+      href: "",
       dates: "Feb 2025",
       active: true,
       description:
@@ -110,7 +114,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://for-vera.vercel.app",
+          href: "",
           icon: <Icons.globe className="size-3" />,
         },
       ],
