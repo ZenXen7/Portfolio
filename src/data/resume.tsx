@@ -104,7 +104,7 @@ export const DATA = {
       dates: "Feb 2025",
       active: true,
       description:
-        "Made a website to celebrate spending Valentine's with my girlfriend. Wanted to be quirky so yeah.",
+        "Made a website to celebrate spending Valentine's with my girlfriend.",
       technologies: [
         "Next.js",
         "Vercel Deployment",
