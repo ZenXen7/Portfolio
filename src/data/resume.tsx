@@ -142,7 +142,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://github.com/fynn07/white-leg-shrimp-management",
+          href: "https://shrimpsense.vercel.app/landing",
           icon: <Icons.globe className="size-3" />,
         },
         {
