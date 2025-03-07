@@ -107,29 +107,38 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Valentine's Website",
-      href: "",
-      dates: "Feb 2025",
+      title: "kChat",
+      href: "https://github.com/ZenXen7/kChat",
+      dates: "March 2025 - Present",
       active: true,
       description:
-        "Made a website to celebrate spending Valentine's with my girlfriend.",
+        "A real-time chat application built using the MERN stack, Socket.io, TailwindCSS, and Daisy UI. This project is designed to enhance my understanding of WebSockets and real-time communication.",
       technologies: [
-        "Next.js",
-        "Vercel Deployment",
-        "Shadcn",
-        ,
+        "React + Vite",
+        "MongoDB",
+        "Node.js",
+        "Express.js",
+        "TailwindCSS",
+        "DaisyUI",
+        "Socket.io",
+        
       ],
       links: [
         {
           type: "Website",
-          href: "",
+          href: "https://github.com/ZenXen7/kChat",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Source",
+          href: "https://github.com/ZenXen7/kChat",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
-      image: "/for-ver.png",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      image: "/kChat-prev.png",
+      video: "",
     },
+   
     {
       title: "Shrimp Sense",
       href: "https://github.com/fynn07/white-leg-shrimp-management",
