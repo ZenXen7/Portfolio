@@ -107,12 +107,12 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "kChat",
+      title: "WildChats",
       href: "https://github.com/ZenXen7/kChat",
       dates: "March 2025 - Present",
       active: true,
       description:
-        "A real-time chat application built using the MERN stack, Socket.io, TailwindCSS, and Daisy UI. This project is designed to enhance my understanding of WebSockets and real-time communication.",
+        "WildChats is a real-time chat application built for Cebu Institute of Technology - University (CIT-U) students, also known as Wildcats! This platform enables seamless communication among students, faculty, and organizations, providing a modern and secure chatting experience.",
       technologies: [
         "React + Vite",
         "MongoDB",
@@ -126,12 +126,12 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://github.com/ZenXen7/kChat",
+          href: "https://github.com/ZenXen7/WildChats",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/ZenXen7/kChat",
+          href: "https://github.com/ZenXen7/WildChats",
           icon: <Icons.github className="size-3" />,
         },
       ],
