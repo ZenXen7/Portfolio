@@ -108,7 +108,7 @@ export const DATA = {
   projects: [
     {
       title: "WildChats",
-      href: "https://github.com/ZenXen7/kChat",
+      href: "https://wildchats-1.onrender.com",
       dates: "March 2025 - Present",
       active: true,
       description:
@@ -126,7 +126,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://github.com/ZenXen7/WildChats",
+          href: "https://wildchats-1.onrender.com",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -135,7 +135,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/kChat-prev.png",
+      image: "/wildchats.png",
       video: "",
     },
    
