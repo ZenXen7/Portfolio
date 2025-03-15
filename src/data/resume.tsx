@@ -8,7 +8,7 @@ export const DATA = {
   location: "Cebu City, Cebu",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-  "Full-stack web developer passionate about AI, frontend frameworks, and building impactful digital experiences.",
+  "Full-stack web developer passionate about, frontend frameworks, mobile development and building impactful digital experiences.",
   summary:
   "I'm a 3rd-year BSCS student with a strong focus on full-stack web development and mobile applications. I specialize in building web applications using React, Next.js, and Vue.js, as well as RESTful APIs and backend services with Node.js, Express, and MongoDB. I have experience developing mobile applications using React Native and Expo while also exploring AI-driven applications. Beyond that, I have experience with Java, C++, C, and Assembly. Always building, always learning.",
   avatarUrl: "/me-pic.jpg",
@@ -17,7 +17,7 @@ export const DATA = {
     "Appwrite",
     "C",
     "C++",
-    "Express",
+    "Express", 
     "Expo",
     "Firebase",
    
