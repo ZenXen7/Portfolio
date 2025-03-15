@@ -141,20 +141,42 @@ export const DATA = {
    
     {
       title: "Shrimp Sense",
-      href: "https://github.com/fynn07/white-leg-shrimp-management",
+      href: "https://github.com/ZenXen7/AgriVision",
+      dates: "March 2025 - Present",
+      active: true,
+      description:
+        "AgriVision is a mobile application that utilizes deep learning and computer vision to detect lettuce diseases from images.",
+      technologies: [
+        "React Native",
+        "NativeWind",
+        "MERN Stack",
+        "Machine Learning",
+       
+        
+      ],
+      links: [
+     
+        {
+          type: "Source",
+          href: "https://github.com/ZenXen7/AgriVision",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/agri.png",
+      video: "",
+    },
+    {
+      title: "ShrimpSense",
+      href: "https://github.com/ZenXen7/Shrimpsense",
       dates: "Jan 2025 - Present",
       active: true,
       description:
         "Monitor, predict, and optimize shrimp farming with data-driven insights and real-time analytics. ShrimpSense ensures optimal water quality, disease prevention, and farm efficiency using AI-powered technology.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        
+       "Next.js",
+       "TailwindCSS",
+       "ShadCN UI",
+       
       ],
       links: [
         {
@@ -164,7 +186,7 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github.com/fynn07/white-leg-shrimp-management",
+          href: "https://github.com/ZenXen7/Shrimpsense",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -172,42 +194,12 @@ export const DATA = {
       video: "",
     },
     {
-      title: "HealthBook - Website",
-      href: "https://github.com/fynn07/healthcare-management-system",
-      dates: "October 2024 - December 2024",
-      active: true,
-      description:
-        "Seamlessly manage medical records and healthcare identification using a powerful digital platform designed for patients, healthcare providers, and hospital administrators.",
-      technologies: [
-       "HTML",
-       "Python",
-       "Django",
-       "Tailwind CSS",
-       "ASP.net",
-       
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://github.com/fynn07/healthcare-management-system",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/fynn07/healthcare-management-system",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/health-book.png",
-      video: "",
-    },
-    {
       title: "HealthBook - App",
-      href: "https://github.com/fynn07/healthcare-management-system",
+      href: "https://github.com/ZenXen7/HBReactNative",
       dates: "October 2024 - December 2024",
       active: true,
       description:
-        "The mobile version of the HealthBook experience.",
+        "Welcome to Healthbook — a cutting-edge digital health tracker designed to manage and monitor your complete medical history all in one place! Whether it's vaccination records, prescriptions, or family health details, Healthbook is your go-to app for simplifying your healthcare management.",
       technologies: [
         "React Native",
         "NativeWind",
@@ -217,7 +209,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://github.com/fynn07/healthcare-management-system",
+          href: "https://github.com/ZenXen7/HBReactNative",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -225,6 +217,58 @@ export const DATA = {
       video:
         "",
     },
+
+    {
+      title: "Lersch Grossman Algorithm Visualizer",
+      href: "https://github.com/ZenXen7/HBReactNative",
+      dates: "October 2024 - December 2024",
+      active: true,
+      description:
+        "A lerch grossman algorithm visualizer built using Java and JavaFX. This aims to provide a visualizer for this specific algorithm using JavaFX for mining Engineers.",
+      technologies: [
+        "Java",
+        "JavaFX",
+       
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/ZenXen7/HBReactNative",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/lerch.png",
+      video:
+        "",
+    },
+
+    {
+      title: "TeknoLost",
+      href: "https://github.com/ZenXen7/TeknoLost",
+      dates: "October 2024 - December 2024",
+      active: true,
+      description:
+        "A lost and found mobile application developed as part of my 2nd-year project at CIT-U. Build using Android Studio, Java and Firebase for backend. The app aims to streamline the process of reporting and recovering lost objects.",
+      technologies: [
+        "Java",
+        "Android Studio",
+        "Firebase",
+       
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/ZenXen7/HBReactNative",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/teknolost.png",
+      video:
+        "",
+    },
+
+    
   ],
+  
   
 } as const;
