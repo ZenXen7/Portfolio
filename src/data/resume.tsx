@@ -140,7 +140,7 @@ export const DATA = {
     },
    
     {
-      title: "Shrimp Sense",
+      title: "AgriVision",
       href: "https://github.com/ZenXen7/AgriVision",
       dates: "March 2025 - Present",
       active: true,
