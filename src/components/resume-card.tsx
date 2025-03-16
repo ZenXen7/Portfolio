@@ -17,6 +17,7 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
+  gwa: string;
   description?: string;
 }
 export const ResumeCard = ({
@@ -27,6 +28,7 @@ export const ResumeCard = ({
   href,
   badges,
   period,
+  gwa,
   description,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -59,7 +61,7 @@ export const ResumeCard = ({
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                {title}
+                {title} 
                 {badges && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
@@ -81,10 +83,11 @@ export const ResumeCard = ({
                 />
               </h3>
               <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {period}
+                {period} | GWA: {gwa}
               </div>
+             
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {subtitle && <div className="font-sans text-xs">{subtitle} </div>}
           </CardHeader>
           {description && (
             <motion.div
@@ -100,7 +103,7 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {description}
+              {description} 
             </motion.div>
           )}
         </div>
