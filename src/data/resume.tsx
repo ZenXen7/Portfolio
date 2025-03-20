@@ -211,10 +211,11 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Source",
           href: "https://github.com/ZenXen7/HBReactNative",
-          icon: <Icons.globe className="size-3" />,
-        },
+          icon: <Icons.github className="size-3" />,
+        }
+        
       ],
       image: "/hb-app.png",
       video:
@@ -235,9 +236,9 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Source",
           href: "https://github.com/ZenXen7/HBReactNative",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/lerch.png",
@@ -260,12 +261,12 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
-          href: "https://github.com/ZenXen7/HBReactNative",
-          icon: <Icons.globe className="size-3" />,
+          type: "Source",
+          href: "https://github.com/ZenXen7/TeknoLost",
+          icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/teknolost.png",
+      image: "/teknolostss.png",
       video:
         "",
     },
