@@ -17,7 +17,6 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  gwa: string;
   description?: string;
 }
 export const ResumeCard = ({
@@ -28,7 +27,6 @@ export const ResumeCard = ({
   href,
   badges,
   period,
-  gwa,
   description,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -83,7 +81,7 @@ export const ResumeCard = ({
                 />
               </h3>
               <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {period} | GWA: {gwa}
+                {period}
               </div>
              
             </div>

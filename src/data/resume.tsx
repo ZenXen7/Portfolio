@@ -10,7 +10,7 @@ export const DATA = {
   description:
   "Full-stack web developer passionate about frontend frameworks, mobile development and building impactful digital experiences.",
   summary:
-  "I'm a 3rd-year BSCS student with a strong focus on full-stack web development and mobile applications. I specialize in building web applications using React, Next.js, and Vue.js, as well as RESTful APIs and backend services with Node.js, Express, and MongoDB. I have experience developing mobile applications using React Native and Expo while also exploring AI-driven applications. Beyond that, I have experience with Java, C++, C, and Assembly. Always building, always learning.",
+  "Passionate and detail-oriented 3rd-year Computer Science student with a solid foundation in software development, problem-solving, and real-world application design. Experienced as a Software Developer Intern, contributing to industry projects and collaborating in cross-functional teams. Skilled in modern technologies, frameworks, and tools used in full-stack development, real-time systems, and backend infrastructure. Proficient in server-side architecture, API development, and database management. Adept at research, data analysis, and algorithm design, with a continuous drive to learn emerging technologies and contribute to innovative, scalable solutions.",
   avatarUrl: "/me-pic.jpg",
   skills: [
 
@@ -20,12 +20,12 @@ export const DATA = {
     "Express", 
     "Expo",
     "Firebase",
-   
     "Java",
     "Javascript",
     "Keras",
     "MongoDB",
     "Next.js",
+    "NestJS",
     "Node.js",
     "PostgreSQL",
     "Postman",
@@ -36,7 +36,7 @@ export const DATA = {
     "SQL",
     "Supabase",
     "TypeScript",
-"Vite"
+    "Vite"
 
    
   ],
@@ -84,7 +84,21 @@ export const DATA = {
       },
     },
   },
+   work: [
+    {
+      company: "Symph",
+      href: "https://www.symph.co/",
+      badges: [],
+      location: "Remote",
+      title: "Software Engineer Intern",
+      logoUrl: "/symph.png",
+      start: "April 2025",
+      end: "Present",
+      description:
+  "As a Fullstack Developer Intern at Symph, I contributed to the development of Flying Tigers Express—a logistics platform offering same-day and next-day inter-island delivery services across the Philippines. I worked on building and maintaining features across the stack, enhancing user experience, and collaborating closely with designers and the rest of the team to deliver scalable solutions."
 
+    },
+    ],
   
   education: [
     {
