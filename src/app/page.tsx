@@ -74,10 +74,92 @@ export default function Page() {
               <h2 className="text-2xl font-bold">About Me</h2>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 4}>
-              <div className="p-6 rounded-2xl bg-white/30 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10">
-                <Markdown className="prose max-w-full text-pretty font-sans text-base text-muted-foreground/90 dark:prose-invert leading-relaxed">
-                  {DATA.summary}
-                </Markdown>
+              <div className="p-8 rounded-2xl bg-white/30 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10">
+                <div className="prose max-w-full text-pretty font-sans text-base text-muted-foreground/90 dark:prose-invert leading-relaxed space-y-6">
+                  <p className="text-lg leading-relaxed">
+                    Passionate and detail-oriented{" "}
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 border border-blue-400/30">
+                      4th-year Computer Science student
+                    </span>{" "}
+                    with a solid foundation in software development, problem-solving, and real-world application design.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed">
+                    Experienced as a{" "}
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 border border-green-400/30">
+                      Full Stack Developer
+                    </span>
+                    , contributing to industry projects and collaborating in cross-functional teams.
+                  </p>
+                  
+                  <div className="grid gap-4 mt-6">
+                    <div className="p-4 rounded-xl bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10">
+                      <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"></div>
+                        Technical Expertise
+                      </h4>
+                      <p className="text-base leading-relaxed">
+                        Skilled in modern technologies, frameworks, and tools used in{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-blue-500/20 text-blue-300 border border-blue-400/20">
+                          full-stack development
+                        </span>
+                        ,{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-purple-500/20 text-purple-300 border border-purple-400/20">
+                          real-time systems
+                        </span>
+                        , and{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-400/20">
+                          backend infrastructure
+                        </span>
+                        .
+                      </p>
+                    </div>
+                    
+                    <div className="p-4 rounded-xl bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10">
+                      <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-400 to-blue-400"></div>
+                        Core Competencies
+                      </h4>
+                      <p className="text-base leading-relaxed">
+                        Proficient in{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-400/20">
+                          server-side architecture
+                        </span>
+                        ,{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-cyan-500/20 text-cyan-300 border border-cyan-400/20">
+                          API development
+                        </span>
+                        , and{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-teal-500/20 text-teal-300 border border-teal-400/20">
+                          database management
+                        </span>
+                        .
+                      </p>
+                    </div>
+                    
+                    <div className="p-4 rounded-xl bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10">
+                      <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-400 to-red-400"></div>
+                        Research & Innovation
+                      </h4>
+                      <p className="text-base leading-relaxed">
+                        Adept at{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-orange-500/20 text-orange-300 border border-orange-400/20">
+                          research
+                        </span>
+                        ,{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-red-500/20 text-red-300 border border-red-400/20">
+                          data analysis
+                        </span>
+                        , and{" "}
+                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-pink-500/20 text-pink-300 border border-pink-400/20">
+                          algorithm design
+                        </span>
+                        , with a continuous drive to learn emerging technologies and contribute to innovative, scalable solutions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </BlurFade>
           </div>

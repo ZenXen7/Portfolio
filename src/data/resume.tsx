@@ -10,7 +10,7 @@ export const DATA = {
   description:
   "Full Stack Developer passionate about frontend frameworks, mobile development and building impactful digital experiences.",
   summary:
-  "Passionate and detail-oriented 3rd-year Computer Science student with a solid foundation in software development, problem-solving, and real-world application design. Experienced as a Software Developer Intern, contributing to industry projects and collaborating in cross-functional teams. Skilled in modern technologies, frameworks, and tools used in full-stack development, real-time systems, and backend infrastructure. Proficient in server-side architecture, API development, and database management. Adept at research, data analysis, and algorithm design, with a continuous drive to learn emerging technologies and contribute to innovative, scalable solutions.",
+  "Passionate and detail-oriented 4th-year Computer Science student with a solid foundation in software development, problem-solving, and real-world application design. Experienced as a Full Stack Developer, contributing to industry projects and collaborating in cross-functional teams. Skilled in modern technologies, frameworks, and tools used in full-stack development, real-time systems, and backend infrastructure. Proficient in server-side architecture, API development, and database management. Adept at research, data analysis, and algorithm design, with a continuous drive to learn emerging technologies and contribute to innovative, scalable solutions.",
   avatarUrl: "/me-pic.jpg",
   skills: [
 
@@ -100,22 +100,30 @@ export const DATA = {
         {
           name: "Flying Tigers Express",
           description:
-            "Contributed to the development of a logistics platform offering same-day and next-day inter-island delivery services across the Philippines. Built and maintained features throughout the stack, improved user experience, and collaborated on scalable solutions."
+            "Contributed to the development of a logistics platform offering same-day and next-day inter-island delivery services across the Philippines. Built and maintained features throughout the stack, improved user experience, and collaborated on scalable solutions.",
+          color: "#fbbf24",
+          link: "https://www.flyingtigers.express"
         },
         {
           name: "Gussy Design",
           description:
-            "Developed and maintained core features for Gussy Design, with significant contributions to the Gussy Collage functionality. Worked alongside the team to deliver performant and engaging user-facing features."
+            "Developed and maintained core features for Gussy Design, with significant contributions to the Gussy Collage functionality. Worked alongside the team to deliver performant and engaging user-facing features.",
+          color: "#d47b63",
+          link: "https://gussy.design"
         },
         {
           name: "SnapProduct",
           description:
-            "Contributed to the development of a speedrun product utilizing AI to generate professional-quality product photos. Implemented and refined fullstack features to support rapid prototyping and innovative workflows."
+            "Contributed to the development of a speedrun product utilizing AI to generate professional-quality product photos. Implemented and refined fullstack features to support rapid prototyping and innovative workflows.",
+          color: "#586cdc",
+          link: "https://www.snapproduct.pro"
         },
         {
           name: "Lesson Planner",
           description:
-            "Enhanced and extended features for an educator-focused lesson planning tool. Delivered user-friendly solutions for creating, organizing, and sharing lesson plans, streamlining teacher workflows."
+            "Enhanced and extended features for an educator-focused lesson planning tool. Delivered user-friendly solutions for creating, organizing, and sharing lesson plans, streamlining teacher workflows.",
+          color: "#3c84f4",
+          link: "https://www.lessonplanner.org"
         }
       ]
     },

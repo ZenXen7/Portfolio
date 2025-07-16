@@ -12,11 +12,11 @@ export function AnimatedBackground({ className }: AnimatedBackgroundProps) {
       
       {/* Subtle animated orbs for dark mode */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full opacity-20 blur-3xl animate-pulse bg-purple-600" 
+        <div className="absolute top-1/4 left-1/6 w-96 h-96 rounded-full opacity-20 blur-3xl animate-pulse bg-red-600" 
              style={{ animationDuration: '4s' }} />
-        <div className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full opacity-15 blur-3xl animate-pulse bg-blue-600" 
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full opacity-15 blur-3xl animate-pulse bg-red-800" 
              style={{ animationDuration: '6s', animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-3/4 w-64 h-64 rounded-full opacity-10 blur-3xl animate-pulse bg-indigo-600" 
+        <div className="absolute top-1/2 left-3/4 w-64 h-64 rounded-full opacity-10 blur-3xl animate-pulse bg-red-900" 
              style={{ animationDuration: '8s', animationDelay: '4s' }} />
       </div>
 
