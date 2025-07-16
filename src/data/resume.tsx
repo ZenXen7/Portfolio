@@ -8,7 +8,7 @@ export const DATA = {
   location: "Cebu City, Cebu",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-  "Full-stack web developer passionate about frontend frameworks, mobile development and building impactful digital experiences.",
+  "Full Stack Developer passionate about frontend frameworks, mobile development and building impactful digital experiences.",
   summary:
   "Passionate and detail-oriented 3rd-year Computer Science student with a solid foundation in software development, problem-solving, and real-world application design. Experienced as a Software Developer Intern, contributing to industry projects and collaborating in cross-functional teams. Skilled in modern technologies, frameworks, and tools used in full-stack development, real-time systems, and backend infrastructure. Proficient in server-side architecture, API development, and database management. Adept at research, data analysis, and algorithm design, with a continuous drive to learn emerging technologies and contribute to innovative, scalable solutions.",
   avatarUrl: "/me-pic.jpg",
@@ -90,13 +90,34 @@ export const DATA = {
       href: "https://www.symph.co/",
       badges: [],
       location: "Remote",
-      title: "Software Engineer Intern",
+      title: "Fullstack Developer Intern",
       logoUrl: "/symph.png",
       start: "April 2025",
       end: "Present",
       description:
-  "As a Fullstack Developer Intern at Symph, I contributed to the development of Flying Tigers Express—a logistics platform offering same-day and next-day inter-island delivery services across the Philippines. I worked on building and maintaining features across the stack, enhancing user experience, and collaborating closely with designers and the rest of the team to deliver scalable solutions."
-
+        "As a Fullstack Developer Intern at Symph, I contributed to the development and enhancement of several products and platforms across diverse domains. I worked closely with designers, engineers, and stakeholders to deliver robust features, improve user experience, and implement scalable solutions across the stack.",
+      projects: [
+        {
+          name: "Flying Tigers Express",
+          description:
+            "Contributed to the development of a logistics platform offering same-day and next-day inter-island delivery services across the Philippines. Built and maintained features throughout the stack, improved user experience, and collaborated on scalable solutions."
+        },
+        {
+          name: "Gussy Design",
+          description:
+            "Developed and maintained core features for Gussy Design, with significant contributions to the Gussy Collage functionality. Worked alongside the team to deliver performant and engaging user-facing features."
+        },
+        {
+          name: "SnapProduct",
+          description:
+            "Contributed to the development of a speedrun product utilizing AI to generate professional-quality product photos. Implemented and refined fullstack features to support rapid prototyping and innovative workflows."
+        },
+        {
+          name: "Lesson Planner",
+          description:
+            "Enhanced and extended features for an educator-focused lesson planning tool. Delivered user-friendly solutions for creating, organizing, and sharing lesson plans, streamlining teacher workflows."
+        }
+      ]
     },
     ],
   
@@ -126,17 +147,14 @@ export const DATA = {
     {
       title: "WildChats",
       href: "https://wildchats-1.onrender.com",
-      dates: "March 2025 - Present",
+      dates: "March 2025 - April 2025",
       active: true,
       description:
         "WildChats is a real-time chat application built for Cebu Institute of Technology - University (CIT-U) students, also known as Wildcats! This platform enables seamless communication among students, faculty, and organizations, providing a modern and secure chatting experience.",
       technologies: [
         "React + Vite",
         "MongoDB",
-        "Node.js",
         "Express.js",
-        "TailwindCSS",
-        "DaisyUI",
         "Socket.io",
         
       ],
@@ -159,7 +177,7 @@ export const DATA = {
     {
       title: "AgriVision",
       href: "https://github.com/ZenXen7/AgriVision",
-      dates: "March 2025 - Present",
+      dates: "March 2025 - March 2025",
       active: true,
       description:
         "AgriVision is a mobile application that utilizes deep learning and computer vision to detect lettuce diseases from images.",
@@ -185,7 +203,7 @@ export const DATA = {
     {
       title: "ShrimpSense",
       href: "https://github.com/ZenXen7/Shrimpsense",
-      dates: "Jan 2025 - Present",
+      dates: "Jan 2025 - Jan 2025",
       active: true,
       description:
         "Monitor, predict, and optimize shrimp farming with data-driven insights and real-time analytics. ShrimpSense ensures optimal water quality, disease prevention, and farm efficiency using AI-powered technology.",
