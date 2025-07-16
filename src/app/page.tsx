@@ -78,7 +78,7 @@ export default function Page() {
                 <div className="prose max-w-full text-pretty font-sans text-base text-muted-foreground/90 dark:prose-invert leading-relaxed space-y-6">
                   <p className="text-lg leading-relaxed">
                     Passionate and detail-oriented{" "}
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 border border-blue-400/30">
+                    <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                       4th-year Computer Science student
                     </span>{" "}
                     with a solid foundation in software development, problem-solving, and real-world application design.
@@ -86,7 +86,7 @@ export default function Page() {
                   
                   <p className="text-lg leading-relaxed">
                     Experienced as a{" "}
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 border border-green-400/30">
+                    <span className="font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                       Full Stack Developer
                     </span>
                     , contributing to industry projects and collaborating in cross-functional teams.
@@ -100,15 +100,15 @@ export default function Page() {
                       </h4>
                       <p className="text-base leading-relaxed">
                         Skilled in modern technologies, frameworks, and tools used in{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-blue-500/20 text-blue-300 border border-blue-400/20">
+                        <span className="font-semibold text-blue-300">
                           full-stack development
                         </span>
                         ,{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-purple-500/20 text-purple-300 border border-purple-400/20">
+                        <span className="font-semibold text-purple-300">
                           real-time systems
                         </span>
                         , and{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-400/20">
+                        <span className="font-semibold text-indigo-300">
                           backend infrastructure
                         </span>
                         .
@@ -122,15 +122,15 @@ export default function Page() {
                       </h4>
                       <p className="text-base leading-relaxed">
                         Proficient in{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-400/20">
+                        <span className="font-semibold text-emerald-300">
                           server-side architecture
                         </span>
                         ,{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-cyan-500/20 text-cyan-300 border border-cyan-400/20">
+                        <span className="font-semibold text-cyan-300">
                           API development
                         </span>
                         , and{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-teal-500/20 text-teal-300 border border-teal-400/20">
+                        <span className="font-semibold text-teal-300">
                           database management
                         </span>
                         .
@@ -144,15 +144,15 @@ export default function Page() {
                       </h4>
                       <p className="text-base leading-relaxed">
                         Adept at{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-orange-500/20 text-orange-300 border border-orange-400/20">
+                        <span className="font-semibold text-orange-300">
                           research
                         </span>
                         ,{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-red-500/20 text-red-300 border border-red-400/20">
+                        <span className="font-semibold text-red-300">
                           data analysis
                         </span>
                         , and{" "}
-                        <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-pink-500/20 text-pink-300 border border-pink-400/20">
+                        <span className="font-semibold text-pink-300">
                           algorithm design
                         </span>
                         , with a continuous drive to learn emerging technologies and contribute to innovative, scalable solutions.
