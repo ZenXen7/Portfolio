@@ -152,7 +152,7 @@ export default function Page() {
                   <Link href={DATA.contact.email} className="text-blue-500 hover:underline">
                     karlchristianajero@gmail.com
                   </Link>{" "}
-                  and I&apos;ll respond whenever I can. I will ignore all soliciting.
+                  and I&apos;ll respond whenever I can.
                 </p>
               </div>
             </BlurFade>
