@@ -98,9 +98,16 @@ export const ResumeCard = ({
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm"
+              className="mt-2 px-4"
             >
-              {description}
+              <ul className="space-y-1 text-xs text-muted-foreground font-sans">
+                {description.split(' • ').map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-muted-foreground mr-2 mt-1 flex-shrink-0">•</span>
+                    <span className="leading-relaxed">{item.trim()}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           )}
         </div>

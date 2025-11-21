@@ -8,9 +8,9 @@ export const DATA = {
   location: "Cebu City, Cebu",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-  "Full-stack web developer passionate about AI, frontend frameworks, and building impactful digital experiences.",
+  "Full Stack Developer",
   summary:
-  "I'm a 3rd-year BSCS student with a strong focus on full-stack web development and AI. I specialize in building web applications using React, Next.js, and Vue.js, as well as RESTful APIs and backend services with Node.js, Express, and MongoDB. I have experience developing mobile applications using React Native and Expo while also exploring AI-driven applications. Beyond that, I have experience with Java, C++, C, and Assembly. Always building, always learning.",
+  "Passionate full stack developer who enjoys building software that makes people's lives and work easier. Experienced in developing real-world applications using modern web and backend technologies. Skilled in API development, database management, and crafting scalable, user-focused solutions with real impact.",
   avatarUrl: "/me-pic.jpg",
   skills: [
     "Next.js",
@@ -66,13 +66,13 @@ export const DATA = {
         url: "https://x.com/Zenxen77",
         icon: Icons.x,
 
-        navbar: true,
+        navbar: false,
       },
       Youtube: {
         name: "Youtube",
         url: "https://www.youtube.com/@zenxen7005",
         icon: Icons.youtube,
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",
@@ -105,11 +105,61 @@ export const DATA = {
     
    
   ],
+  work: [
+    {
+      company: "Flying Tigers Express",
+      href: "https://flyingtigersexpress.com",
+      badges: [],
+      location: "Philippines",
+      title: "Full Stack Developer Intern",
+      logoUrl: "/FTE-Logo.png",
+      start: "September 2024",
+      end: "Present",
+      description: [
+        "Transitioned to work exclusively on Flying Tigers Express after internship rotation at Symph.",
+        "Built and maintained features across the full stack, enhancing performance, usability, and scalability.",
+        "Collaborated closely with designers and developers to deliver user-focused solutions and improve overall user experience.",
+        "Assisted in debugging and optimizing core platform components to ensure seamless logistics operations."
+      ],
+    },
+    {
+      company: "Symph",
+      href: "https://symph.co",
+      badges: [],
+      location: "Philippines",
+      title: "Full Stack Developer Intern",
+      logoUrl: "/symph-logo.png",
+      start: "April 2024",
+      end: "Present",
+      description: [
+        "Worked across multiple projects under Symph, contributing to both client and internal products covering web and AI-driven applications.",
+        "Collaborated in cross-functional teams to develop, maintain, and enhance features across the full stack."
+      ],
+      projects: [
+        {
+          name: "Flying Tigers Express",
+          description: "Contributed to the development of a logistics platform offering same-day and next-day inter-island delivery services across the Philippines."
+        },
+        {
+          name: "Gussy Design",
+          description: "Maintained legacy codebases and implemented new client-requested features, including updates to the Gussy Collage functionality."
+        },
+        {
+          name: "SnapProduct",
+          description: "Participated in the early-stage development of a startup product that generates professional-level product photos using AI. Helped ideate and propose new features to improve output quality and workflow."
+        },
+        {
+          name: "Lesson Planner",
+          description: "Assisted in bug fixes and handled minor feature tickets to improve tools supporting educators in creating and organizing lesson plans."
+        }
+      ]
+    }
+  ],
   projects: [
     {
       title: "WildChats",
       href: "https://wildchats-1.onrender.com",
-      dates: "March 2025 - Present",
+      dates: "March 2025 - April 2025",
       active: true,
       description:
         "WildChats is a real-time chat application built for Cebu Institute of Technology - University (CIT-U) students, also known as Wildcats! This platform enables seamless communication among students, faculty, and organizations, providing a modern and secure chatting experience.",
@@ -140,9 +190,9 @@ export const DATA = {
     },
    
     {
-      title: "Shrimp Sense",
+      title: "AgriVision",
       href: "https://github.com/ZenXen7/AgriVision",
-      dates: "March 2025 - Present",
+      dates: "March 2025 - March 2025",
       active: true,
       description:
         "AgriVision is a mobile application that utilizes deep learning and computer vision to detect lettuce diseases from images.",
@@ -168,7 +218,7 @@ export const DATA = {
     {
       title: "ShrimpSense",
       href: "https://github.com/ZenXen7/Shrimpsense",
-      dates: "Jan 2025 - Present",
+      dates: "January 2025 - February 2025",
       active: true,
       description:
         "Monitor, predict, and optimize shrimp farming with data-driven insights and real-time analytics. ShrimpSense ensures optimal water quality, disease prevention, and farm efficiency using AI-powered technology.",
