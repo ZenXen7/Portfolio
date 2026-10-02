@@ -88,7 +88,8 @@ export const DATA = {
     {
       school: "Cebu Institute of Technology - University",
       href: "https://cit.edu",
-      degree: "Bachelor of Science in Computer Science",
+      degree: "Degree in BS Computer Science",
+      status: "",
       logoUrl: "/logo-cit.png",
       start: "2022",
       end: "2026",
@@ -97,6 +98,7 @@ export const DATA = {
       school: "Mater Dei College",
       href: "https://www.facebook.com/mdctubigon/",
       degree: "STEM Engineering - Senior High",
+      status: "",
       logoUrl: "/mdc-logo.png",
       start: "2020",
       end: "2022",

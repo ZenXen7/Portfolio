@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal";
+import { TypewriterText } from "@/components/typewriter-text";
 import { DATA } from "@/data/resume";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,12 +13,11 @@ export default function Page() {
             Full Stack Developer · Cebu
           </p>
           <h1 className="font-display text-[clamp(2.25rem,9vw,4.75rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-[var(--ink)]">
-            I build products
-            <br />
-            <span className="relative inline-block">
-              that actually matter.
-              <span className="hero-line absolute -bottom-1 left-0 h-[3px] w-full rounded-full" />
-            </span>
+            <TypewriterText
+              text={"I build products\nthat actually matter."}
+              delay={250}
+              speed={48}
+            />
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-[var(--muted)] sm:mt-6 sm:text-base md:mx-0 md:text-lg">
             {DATA.summary}
@@ -196,7 +196,14 @@ export default function Page() {
               <ul className="mt-8 space-y-5 sm:mt-10 sm:space-y-8">
                 {DATA.education.map((school) => (
                   <li key={school.school} className="rounded-2xl border border-[var(--line)] bg-white p-4 sm:p-5">
-                    <p className="text-base font-semibold tracking-tight sm:text-lg">{school.school}</p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="text-base font-semibold tracking-tight sm:text-lg">{school.school}</p>
+                      {school.status ? (
+                        <span className="rounded-full bg-[var(--ink)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-white">
+                          {school.status}
+                        </span>
+                      ) : null}
+                    </div>
                     <p className="mt-1 text-sm text-[var(--muted)]">{school.degree}</p>
                     <p className="mt-1 text-sm text-[var(--muted)]">
                       {school.start} – {school.end}
