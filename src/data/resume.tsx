@@ -2,42 +2,42 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "KC Ajero - Portfolio",
+  name: "Karl Christian Ajero",
   initials: "KC",
   url: "https://github.com/ZenXen7",
-  location: "Cebu City, Cebu",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
-  description:
-  "Full Stack Developer",
+  location: "Cebu City",
+  locationLink: "https://www.google.com/maps/place/Cebu+City",
+  description: "Full Stack Developer",
   summary:
-  "Passionate full stack developer who enjoys building software that makes people's lives and work easier. Experienced in developing real-world applications using modern web and backend technologies. Skilled in API development, database management, and crafting scalable, user-focused solutions with real impact.",
-  avatarUrl: "/me-pic.jpg",
+    "Full stack developer with production experience across enterprise logistics and large-scale government education systems. Currently leading development of the Flying Tigers Express Business Portal. Co-founder and technical lead at Sanct, where I architected DepEd MPS, a regional score-monitoring platform supporting 50,000+ students, 200,000+ encoded scores, and 2,000+ educators.",
+  avatarUrl: "/me-pic.png",
   skills: [
-    "Next.js",
     "React",
-    "Vite",
-    "React Native",
-    "TypeScript",
+    "Next.js",
+    "Angular",
+    "AngularJS",
+    "Vue.js",
     "Node.js",
-    "Python",
-    "Express",
-    "Postman",
-    "SQL",
-    "Appwrite",
-    "Firebase",
-    "Supabase",
-    "MongoDB", 
+    "Express.js",
+    "NestJS",
+    "Django",
+    "FastAPI",
+    "MongoDB",
+    "MySQL",
     "PostgreSQL",
-    "AWS",
-    "Appwrite",
-    "Firebase",
     "Supabase",
-    "Docker",
-    "Javascript",
-    "Java",
-    "C++",
-    "C",
-    "Assembly"
+    "Firebase",
+    "React Native",
+    "Expo",
+    "Android Studio",
+    "Swift",
+    "Flutter",
+    "GCP",
+    "AWS",
+    "Vercel",
+    "Railway",
+    "GitHub Actions",
+    "CI/CD",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -45,27 +45,24 @@ export const DATA = {
   ],
   contact: {
     email: "karlchristianajero@gmail.com",
-    tel: "+63 09155483788",
+    tel: "09155483788",
     social: {
       GitHub: {
         name: "GitHub",
         url: "https://github.com/ZenXen7",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/kc-ajero/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
         url: "https://x.com/Zenxen77",
         icon: Icons.x,
-
         navbar: false,
       },
       Youtube: {
@@ -76,18 +73,15 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:karlchristianajero@gmail.com",
         icon: Icons.email,
-
         navbar: false,
       },
     },
   },
-
-  
   education: [
     {
-      school: "Cebu Institute of Technology",
+      school: "Cebu Institute of Technology - University",
       href: "https://cit.edu",
       degree: "Bachelor of Science in Computer Science",
       logoUrl: "/logo-cit.png",
@@ -97,13 +91,11 @@ export const DATA = {
     {
       school: "Mater Dei College",
       href: "https://www.facebook.com/mdctubigon/",
-      degree: "Senior High Student, Majoring in STEM Engineering",
+      degree: "STEM Engineering - Senior High",
       logoUrl: "/mdc-logo.png",
       start: "2020",
       end: "2022",
     },
-    
-   
   ],
   work: [
     {
@@ -111,15 +103,34 @@ export const DATA = {
       href: "https://flyingtigersexpress.com",
       badges: [],
       location: "Philippines",
-      title: "Full Stack Developer Intern",
+      title: "Full Stack Developer",
       logoUrl: "/FTE-Logo.png",
-      start: "September 2024",
+      start: "September 2025",
       end: "Present",
       description: [
-        "Transitioned to work exclusively on Flying Tigers Express after internship rotation at Symph.",
-        "Built and maintained features across the full stack, enhancing performance, usability, and scalability.",
-        "Collaborated closely with designers and developers to deliver user-focused solutions and improve overall user experience.",
-        "Assisted in debugging and optimizing core platform components to ensure seamless logistics operations."
+        "Lead development for the Business Portal. Built key features, including bulk shipment import, partner dashboards, and waybill generation workflows.",
+        "Architected the Business API integration layer — REST endpoints for bookings, batch tracking, webhook registration, rate limiting, and sandbox isolation — enabling programmatic shipment management for enterprise clients.",
+        "Implemented Business Team Wallet on the backend and customer app: wallet activation, Xendit-backed top-ups, shared balance across team members, and default booking payment method configuration.",
+        "Built centralized activity logging with entity-scoped metadata (shipments, businesses, invoices, tickets, API keys) and an Admin Ops global activity view with category filters, search, and human-readable formatting.",
+        "Integrated third-party logistics workflows (e.g. Lalamove, Consegnia) via integration batches and webhook handlers, plus partner-facing webhook management in the Business Portal.",
+      ],
+    },
+    {
+      company: "Sanct",
+      href: "",
+      badges: [],
+      location: "Philippines",
+      title: "Co-Founder & Technical Lead",
+      logoUrl: "/sanct-logo.webp",
+      start: "December 2023",
+      end: "September 2025",
+      description: [
+        "Co-founded Sanct, a DTI-registered startup that designs and builds websites and web platforms for clients. Led the technical side, from system architecture to delivery.",
+        "Built and delivered multiple client websites, including a real estate website and our biggest project, DepEd MPS.",
+        "Technical lead for DepEd MPS, a Mean Percentage Score monitoring platform for DepEd Region X, owning system architecture and engineering delivery for regional score encoding, section management, and school/division performance review.",
+        "Defined the technical roadmap and led the engineering team in shipping features aligned with how DepEd divisions and schools work, from educator score entry to division-level oversight and reporting.",
+        "Architected a scalable system for high-volume education data, now supporting 50,000+ students, 200,000+ encoded scores, and 2,000+ active educators, and expanding to other regions in the Philippines.",
+        "Set engineering standards around role-based access, encode-time data validation, and division/school aggregation, prioritizing security, data integrity, and maintainability for government use.",
       ],
     },
     {
@@ -129,31 +140,30 @@ export const DATA = {
       location: "Philippines",
       title: "Full Stack Developer Intern",
       logoUrl: "/symph-logo.png",
-      start: "April 2024",
-      end: "Present",
+      start: "April 2023",
+      end: "September 2023",
       description: [
-        "Worked across multiple projects under Symph, contributing to both client and internal products covering web and AI-driven applications.",
-        "Collaborated in cross-functional teams to develop, maintain, and enhance features across the full stack."
+        "Contributed to the development of LessonPlanner, an AI-driven platform designed to automate and simplify lesson planning for educators.",
+        "Built features for SnapProduct, a generative AI tool that transforms standard product photos into professional, photoshoot-ready images.",
+        "Collaborated within cross-functional teams to develop, maintain, and enhance features across the full stack for various client and internal products.",
+        "Maintained and optimized multiple ongoing web applications, ensuring code reliability and a smooth user experience across different project environments.",
       ],
-      projects: [
-        {
-          name: "Flying Tigers Express",
-          description: "Contributed to the development of a logistics platform offering same-day and next-day inter-island delivery services across the Philippines."
-        },
-        {
-          name: "Gussy Design",
-          description: "Maintained legacy codebases and implemented new client-requested features, including updates to the Gussy Collage functionality."
-        },
-        {
-          name: "SnapProduct",
-          description: "Participated in the early-stage development of a startup product that generates professional-level product photos using AI. Helped ideate and propose new features to improve output quality and workflow."
-        },
-        {
-          name: "Lesson Planner",
-          description: "Assisted in bug fixes and handled minor feature tickets to improve tools supporting educators in creating and organizing lesson plans."
-        }
-      ]
-    }
+    },
+    {
+      company: "Freelance",
+      href: "",
+      badges: [],
+      location: "Independent / Contractual",
+      title: "Full Stack Developer",
+      logoUrl: "",
+      start: "2021",
+      end: "2022",
+      description: [
+        "Designed and built websites and small web applications for individual and small-business clients, handling requirements gathering, development, and deployment independently.",
+        "Delivered a mix of marketing/portfolio websites, web apps with backend and database integration, and e-commerce sites, working directly with clients from scope to launch.",
+        "Managed the full project lifecycle solo — client communication, UI implementation, backend/API setup, and post-launch fixes — building early experience in end-to-end ownership later applied in production roles.",
+      ],
+    },
   ],
   projects: [
     {
@@ -171,7 +181,6 @@ export const DATA = {
         "TailwindCSS",
         "DaisyUI",
         "Socket.io",
-        
       ],
       links: [
         {
@@ -188,7 +197,6 @@ export const DATA = {
       image: "/wildchats.png",
       video: "",
     },
-   
     {
       title: "AgriVision",
       href: "https://github.com/ZenXen7/AgriVision",
@@ -201,11 +209,8 @@ export const DATA = {
         "NativeWind",
         "MERN Stack",
         "Machine Learning",
-       
-        
       ],
       links: [
-     
         {
           type: "Source",
           href: "https://github.com/ZenXen7/AgriVision",
@@ -222,12 +227,7 @@ export const DATA = {
       active: true,
       description:
         "Monitor, predict, and optimize shrimp farming with data-driven insights and real-time analytics. ShrimpSense ensures optimal water quality, disease prevention, and farm efficiency using AI-powered technology.",
-      technologies: [
-       "Next.js",
-       "TailwindCSS",
-       "ShadCN UI",
-       
-      ],
+      technologies: ["Next.js", "TailwindCSS", "ShadCN UI"],
       links: [
         {
           type: "Website",
@@ -250,12 +250,7 @@ export const DATA = {
       active: true,
       description:
         "Welcome to Healthbook — a cutting-edge digital health tracker designed to manage and monitor your complete medical history all in one place! Whether it's vaccination records, prescriptions, or family health details, Healthbook is your go-to app for simplifying your healthcare management.",
-      technologies: [
-        "React Native",
-        "NativeWind",
-        "Appwrite",
-        "Expo",
-      ],
+      technologies: ["React Native", "NativeWind", "Appwrite", "Expo"],
       links: [
         {
           type: "Website",
@@ -264,10 +259,8 @@ export const DATA = {
         },
       ],
       image: "/hb-app.png",
-      video:
-        "",
+      video: "",
     },
-
     {
       title: "Lersch Grossman Algorithm Visualizer",
       href: "https://github.com/ZenXen7/HBReactNative",
@@ -275,11 +268,7 @@ export const DATA = {
       active: true,
       description:
         "A lerch grossman algorithm visualizer built using Java and JavaFX. This aims to provide a visualizer for this specific algorithm using JavaFX for mining Engineers.",
-      technologies: [
-        "Java",
-        "JavaFX",
-       
-      ],
+      technologies: ["Java", "JavaFX"],
       links: [
         {
           type: "Website",
@@ -288,10 +277,8 @@ export const DATA = {
         },
       ],
       image: "/lerch.png",
-      video:
-        "",
+      video: "",
     },
-
     {
       title: "TeknoLost",
       href: "https://github.com/ZenXen7/TeknoLost",
@@ -299,12 +286,7 @@ export const DATA = {
       active: true,
       description:
         "A lost and found mobile application developed as part of my 2nd-year project at CIT-U. Build using Android Studio, Java and Firebase for backend. The app aims to streamline the process of reporting and recovering lost objects.",
-      technologies: [
-        "Java",
-        "Android Studio",
-        "Firebase",
-       
-      ],
+      technologies: ["Java", "Android Studio", "Firebase"],
       links: [
         {
           type: "Website",
@@ -313,12 +295,20 @@ export const DATA = {
         },
       ],
       image: "/teknolost.png",
-      video:
-        "",
+      video: "",
     },
-
-    
   ],
-  
-  
+  research: [
+    {
+      title:
+        "Personal Back Squat Form Correction System Using Mediapipe Pose Estimation and QLoRa-Fine-Tuned Language Models",
+      venue:
+        "12th International Conference on Education and Training Technologies (ICETT), Seoul, South Korea",
+      date: "May 2026",
+      description: [
+        "Developed an AI-driven system that utilizes computer vision and fine-tuned LLMs to provide real-time feedback and correction for athletic form.",
+        "Presented this research at the 12th International Conference on Education and Training Technologies (ICETT) in Seoul, South Korea, in May 2026.",
+      ],
+    },
+  ],
 } as const;

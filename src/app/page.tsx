@@ -7,6 +7,7 @@ import { ResumeCard } from "@/components/resume-card"
 import { TypewriterText } from "@/components/typewriter-text"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { DATA } from "@/data/resume"
 import Link from "next/link"
 import Markdown from "react-markdown"
@@ -27,13 +28,13 @@ export default function Page() {
                   delay={500}
                   speed={100}
                   className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                  text={`Hi, I'm ${DATA.name.split(" ")[0]} 😼`}
+                  text={`Hi, I'm ${DATA.initials} 😼`}
                 />
                 <BlurFadeText className="max-w-[600px] md:text-xl" delay={BLUR_FADE_DELAY} text={DATA.description} />
               </div>
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <Avatar className="size-28 border">
-                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarImage alt={DATA.name} className="object-cover object-center" src={DATA.avatarUrl} />
                   <AvatarFallback>{DATA.initials}</AvatarFallback>
                 </Avatar>
               </BlurFade>
@@ -140,6 +141,48 @@ export default function Page() {
             </div>
           </div>
         </section>
+        <section id="research">
+          <div className="space-y-12 w-full py-12">
+            <BlurFade delay={BLUR_FADE_DELAY * 13}>
+              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <div className="space-y-2">
+                  <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                    Research
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Conference presentations</h2>
+                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    Research on computer vision and language models for real-time athletic form correction.
+                  </p>
+                </div>
+              </div>
+            </BlurFade>
+            <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-3">
+              {DATA.research.map((item, id) => (
+                <BlurFade key={item.title} delay={BLUR_FADE_DELAY * 14 + id * 0.05}>
+                  <Card className="border">
+                    <CardHeader className="space-y-2 p-4">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Badge variant="secondary">{item.date}</Badge>
+                        <span className="text-xs text-muted-foreground">{item.venue}</span>
+                      </div>
+                      <CardTitle className="text-base leading-snug">{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="px-4 pb-4">
+                      <ul className="space-y-2 text-xs">
+                        {item.description.map((point) => (
+                          <li key={point} className="flex items-start">
+                            <span className="mr-2 mt-1 flex-shrink-0">•</span>
+                            <span className="leading-relaxed">{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </BlurFade>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section id="contact">
           <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
@@ -149,8 +192,8 @@ export default function Page() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
                 <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Want to chat? Just email me at{" "}
-                  <Link href={DATA.contact.email} className="text-blue-500 hover:underline">
-                    karlchristianajero@gmail.com
+                  <Link href={`mailto:${DATA.contact.email}`} className="text-blue-500 hover:underline">
+                    {DATA.contact.email}
                   </Link>{" "}
                   and I&apos;ll respond whenever I can.
                 </p>
