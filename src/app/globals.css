@@ -71,8 +71,77 @@
       @apply border-border;
     }
     body {
-      @apply bg-background text-foreground;
+      @apply bg-[var(--page)] text-[var(--ink)];
     }
+  }
+
+  :root {
+    --page: #f4f4f4;
+    --surface: #ebebeb;
+    --ink: #111111;
+    --muted: #5a5a5a;
+    --line: #d6d6d6;
+    --accent: #111111;
+    --accent-soft: rgba(17, 17, 17, 0.08);
+  }
+
+  .hero-line {
+    background: #111111;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    transition:
+      opacity 0.55s ease,
+      transform 0.55s ease;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .project-card {
+    transition: border-color 0.2s ease;
+  }
+
+  .project-card:hover {
+    border-color: #bdbdbd;
+  }
+
+  .section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  @media (min-width: 640px) {
+    .section-kicker {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+    }
+  }
+
+  .section-kicker::before {
+    content: "";
+    width: 1.5rem;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--accent);
   }
 
   h3 code {

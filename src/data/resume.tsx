@@ -1,5 +1,4 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Karl Christian Ajero",
@@ -9,39 +8,45 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/Cebu+City",
   description: "Full Stack Developer",
   summary:
-    "Full stack developer with production experience across enterprise logistics and large-scale government education systems. Currently leading development of the Flying Tigers Express Business Portal. Co-founder and technical lead at Sanct, where I architected DepEd MPS, a regional score-monitoring platform supporting 50,000+ students, 200,000+ encoded scores, and 2,000+ educators.",
+    "I build production-ready systems end to end, from public web products and mobile apps to tools that make people's work and lives easier.",
+  headline: "I build products\nthat actually matter.",
+  resumeUrl: "https://flowcv.com/resume/f413bkm83jgq",
   avatarUrl: "/me-pic.png",
-  skills: [
-    "React",
-    "Next.js",
-    "Angular",
-    "AngularJS",
-    "Vue.js",
-    "Node.js",
-    "Express.js",
-    "NestJS",
-    "Django",
-    "FastAPI",
-    "MongoDB",
-    "MySQL",
-    "PostgreSQL",
-    "Supabase",
-    "Firebase",
-    "React Native",
-    "Expo",
-    "Android Studio",
-    "Swift",
-    "Flutter",
-    "GCP",
-    "AWS",
-    "Vercel",
-    "Railway",
-    "GitHub Actions",
-    "CI/CD",
+  skillGroups: [
+    {
+      category: "Languages",
+      items: ["TypeScript", "JavaScript", "Python", "Java", "Swift"],
+    },
+    {
+      category: "Web",
+      items: [
+        "React",
+        "Next.js",
+        "Angular",
+        "AngularJS",
+        "Vue.js",
+        "Node.js",
+        "Express.js",
+        "NestJS",
+        "Django",
+        "FastAPI",
+      ],
+    },
+    {
+      category: "Desktop / Mobile",
+      items: ["React Native", "Expo", "Android Studio", "Swift", "Flutter"],
+    },
+    {
+      category: "Data",
+      items: ["MongoDB", "MySQL", "PostgreSQL", "Supabase", "Firebase"],
+    },
+    {
+      category: "Infrastructure",
+      items: ["GCP", "AWS", "Railway", "GitHub Actions", "CI/CD"],
+    },
   ],
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/", icon: Icons.globe, label: "Home" },
   ],
   contact: {
     email: "karlchristianajero@gmail.com",
@@ -263,7 +268,7 @@ export const DATA = {
     },
     {
       title: "Lersch Grossman Algorithm Visualizer",
-      href: "https://github.com/ZenXen7/HBReactNative",
+      href: "https://github.com/ZenXen7/Lerch-Grossman-Visualization",
       dates: "October 2024 - December 2024",
       active: true,
       description:
@@ -271,9 +276,9 @@ export const DATA = {
       technologies: ["Java", "JavaFX"],
       links: [
         {
-          type: "Website",
-          href: "https://github.com/ZenXen7/HBReactNative",
-          icon: <Icons.globe className="size-3" />,
+          type: "Source",
+          href: "https://github.com/ZenXen7/Lerch-Grossman-Visualization",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/lerch.png",
@@ -289,9 +294,9 @@ export const DATA = {
       technologies: ["Java", "Android Studio", "Firebase"],
       links: [
         {
-          type: "Website",
-          href: "https://github.com/ZenXen7/HBReactNative",
-          icon: <Icons.globe className="size-3" />,
+          type: "Source",
+          href: "https://github.com/ZenXen7/TeknoLost",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/teknolost.png",
@@ -305,6 +310,7 @@ export const DATA = {
       venue:
         "12th International Conference on Education and Training Technologies (ICETT), Seoul, South Korea",
       date: "May 2026",
+      href: "https://ieeexplore.ieee.org/document/11666347/",
       description: [
         "Developed an AI-driven system that utilizes computer vision and fine-tuned LLMs to provide real-time feedback and correction for athletic form.",
         "Presented this research at the 12th International Conference on Education and Training Technologies (ICETT) in Seoul, South Korea, in May 2026.",

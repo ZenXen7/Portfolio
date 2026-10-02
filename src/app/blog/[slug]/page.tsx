@@ -65,7 +65,7 @@ export default async function Blog({
   }
 
   return (
-    <section id="blog">
+    <section id="blog" className="mx-auto max-w-3xl px-4 pb-20 pt-12 sm:px-6 sm:pb-24 sm:pt-16">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -88,7 +88,7 @@ export default async function Blog({
           }),
         }}
       />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
+      <h1 className="font-display title max-w-[650px] text-4xl tracking-tight">
         {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">

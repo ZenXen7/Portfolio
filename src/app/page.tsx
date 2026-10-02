@@ -1,208 +1,249 @@
-import { AnimatedBackground } from "@/components/animated-background"
-import { FloatingShapesBackground } from "@/components/floating-shapes-background"
-import BlurFade from "@/components/magicui/blur-fade"
-import BlurFadeText from "@/components/magicui/blur-fade-text"
-import { ProjectCard } from "@/components/project-card"
-import { ResumeCard } from "@/components/resume-card"
-import { TypewriterText } from "@/components/typewriter-text"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { DATA } from "@/data/resume"
-import Link from "next/link"
-import Markdown from "react-markdown"
-
-const BLUR_FADE_DELAY = 0.04
+import { Reveal } from "@/components/reveal";
+import { DATA } from "@/data/resume";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
-    <>
-    <AnimatedBackground />
-      <FloatingShapesBackground />
-      <main className="flex flex-col min-h-[100dvh] space-y-10">
-        <section id="hero">
-          <div className="mx-auto w-full max-w-2xl space-y-8">
-            <div className="gap-2 flex justify-between">
-              <div className="flex-col flex flex-1 space-y-3">
-                <TypewriterText
-                  delay={500}
-                  speed={100}
-                  className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                  text={`Hi, I'm ${DATA.initials} 😼`}
-                />
-                <BlurFadeText className="max-w-[600px] md:text-xl" delay={BLUR_FADE_DELAY} text={DATA.description} />
-              </div>
-              <BlurFade delay={BLUR_FADE_DELAY}>
-                <Avatar className="size-28 border">
-                  <AvatarImage alt={DATA.name} className="object-cover object-center" src={DATA.avatarUrl} />
-                  <AvatarFallback>{DATA.initials}</AvatarFallback>
-                </Avatar>
-              </BlurFade>
-            </div>
+    <main className="overflow-x-hidden">
+      <section className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 md:flex-row md:items-start md:justify-between md:gap-16 md:pb-28 md:pt-28">
+        <Reveal className="order-2 w-full max-w-2xl flex-1 text-center md:order-1 md:text-left">
+          <p className="section-kicker mb-4 justify-center md:mb-5 md:justify-start">
+            Full Stack Developer · Cebu
+          </p>
+          <h1 className="font-display text-[clamp(2.25rem,9vw,4.75rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-[var(--ink)]">
+            I build products
+            <br />
+            <span className="relative inline-block">
+              that actually matter.
+              <span className="hero-line absolute -bottom-1 left-0 h-[3px] w-full rounded-full" />
+            </span>
+          </h1>
+          <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-[var(--muted)] sm:mt-6 sm:text-base md:mx-0 md:text-lg">
+            {DATA.summary}
+          </p>
+          <div className="mt-7 flex flex-wrap justify-center gap-3 text-sm font-semibold md:mt-8 md:justify-start">
+            <Link
+              href={DATA.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[var(--ink)] px-5 py-2.5 text-white transition-opacity hover:opacity-90"
+            >
+              View resume
+            </Link>
+            <Link
+              href={DATA.contact.social.GitHub.url}
+              className="rounded-full border-2 border-[var(--ink)] bg-white px-5 py-2.5 text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-white"
+            >
+              GitHub
+            </Link>
+            <Link
+              href={DATA.contact.social.LinkedIn.url}
+              className="rounded-full border-2 border-[var(--line)] bg-white px-5 py-2.5 text-[var(--ink)] transition-colors hover:border-[var(--ink)] hover:bg-[var(--ink)] hover:text-white"
+            >
+              LinkedIn
+            </Link>
           </div>
-        </section>
-        <section id="about">
-          <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold">About</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-              {DATA.summary}
-            </Markdown>
-          </BlurFade>
-        </section>
+        </Reveal>
+        <Reveal delay={0.08} className="order-1 shrink-0 pt-2 md:order-2 md:mt-10 md:pt-6">
+          <div className="relative mx-auto size-40 overflow-hidden rounded-full border border-[var(--line)] bg-[var(--surface)] sm:size-48 md:mx-0 md:size-56">
+            <Image
+              src={DATA.avatarUrl}
+              alt={DATA.name}
+              fill
+              priority
+              className="object-cover object-top grayscale"
+              sizes="(max-width: 768px) 192px, 224px"
+            />
+          </div>
+        </Reveal>
+      </section>
 
-        <section id="education">
-          <div className="flex min-h-0 flex-col gap-y-3">
-            <BlurFade delay={BLUR_FADE_DELAY * 7}>
-              <h2 className="text-xl font-bold">Education</h2>
-            </BlurFade>
-            {DATA.education.map((education, id) => (
-              <BlurFade key={education.school} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
-                <ResumeCard
-                  key={education.school}
-                  href={education.href}
-                  logoUrl={education.logoUrl}
-                  altText={education.school}
-                  title={education.school}
-                  subtitle={education.degree}
-                  period={`${education.start} - ${education.end}`}
-                />
-              </BlurFade>
+      <section id="work" className="border-t border-[var(--line)] bg-[var(--surface)]">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 md:py-28">
+          <Reveal>
+            <p className="section-kicker">Experience</p>
+            <h2 className="font-display mt-3 text-3xl tracking-tight sm:text-4xl md:text-5xl">Work</h2>
+          </Reveal>
+          <div className="mt-8 space-y-0 sm:mt-12">
+            {DATA.work.map((job, index) => (
+              <Reveal key={job.company} delay={Math.min(index * 0.04, 0.16)}>
+                <article className="grid gap-4 border-t border-[var(--line)] py-8 sm:gap-6 sm:py-10 md:grid-cols-[220px_1fr] md:gap-12">
+                  <div>
+                    <div className="flex items-center gap-3">
+                      {job.logoUrl ? (
+                        <Image
+                          src={job.logoUrl}
+                          alt=""
+                          width={32}
+                          height={32}
+                          className="size-8 shrink-0 rounded-md object-contain"
+                        />
+                      ) : null}
+                      <h3 className="text-base font-semibold tracking-tight sm:text-lg">{job.company}</h3>
+                    </div>
+                    <p className="mt-2 text-sm text-[var(--ink)]">{job.title}</p>
+                    <p className="mt-1 text-sm text-[var(--muted)]">
+                      {job.start} – {job.end}
+                    </p>
+                  </div>
+                  <ul className="space-y-3 text-sm leading-relaxed text-[var(--muted)] sm:text-[15px]">
+                    {job.description.map((point) => (
+                      <li
+                        key={point}
+                        className="relative pl-4 before:absolute before:left-0 before:top-[0.65em] before:size-1.5 before:rounded-full before:bg-[var(--ink)]"
+                      >
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
             ))}
           </div>
-        </section>
-        <section id="work">
-          <div className="flex min-h-0 flex-col gap-y-3">
-            <BlurFade delay={BLUR_FADE_DELAY * 5}>
-              <h2 className="text-xl font-bold">Work Experience</h2>
-            </BlurFade>
-            {DATA.work.map((work, id) => (
-              <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
-                <ResumeCard
-                  key={work.company}
-                  href={work.href}
-                  logoUrl={work.logoUrl}
-                  altText={work.company}
-                  title={work.company}
-                  subtitle={work.title}
-                  period={`${work.start} - ${work.end}`}
-                  description={work.description.join(" • ")}
-                />
-              </BlurFade>
+        </div>
+      </section>
+
+      <section id="projects" className="border-t border-[var(--line)]">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 md:py-28">
+          <Reveal>
+            <p className="section-kicker">Selected work</p>
+            <h2 className="font-display mt-3 text-3xl tracking-tight sm:text-4xl md:text-5xl">Projects</h2>
+            <p className="mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
+              Web, mobile, and machine learning work built for real users.
+            </p>
+          </Reveal>
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-8">
+            {DATA.projects.map((project, index) => (
+              <Reveal key={project.title} delay={(index % 2) * 0.04}>
+                <article className="project-card group flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-white p-2.5 sm:rounded-3xl sm:p-3">
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-[var(--surface)] sm:rounded-2xl">
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+                        sizes="(max-width: 640px) 100vw, 480px"
+                      />
+                    ) : null}
+                  </div>
+                  <div className="mt-3 flex flex-1 flex-col px-1 pb-1.5 sm:mt-4 sm:pb-2">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
+                      <h3 className="text-lg font-semibold tracking-tight sm:text-xl">{project.title}</h3>
+                      <span className="text-xs text-[var(--muted)]">{project.dates}</span>
+                    </div>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{project.description}</p>
+                    <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold text-[var(--ink)] sm:mt-4">
+                      {project.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="underline-offset-4 hover:underline"
+                        >
+                          {link.type}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
             ))}
           </div>
-        </section>
-        <section id="skills">
-          <div className="flex min-h-0 flex-col gap-y-3">
-            <BlurFade delay={BLUR_FADE_DELAY * 9}>
-              <h2 className="text-xl font-bold">Skills</h2>
-            </BlurFade>
-            <div className="flex flex-wrap gap-1">
-              {DATA.skills.map((skill, id) => (
-                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <Badge key={skill}>{skill}</Badge>
-                </BlurFade>
-              ))}
-            </div>
-          </div>
-        </section>
-        <section id="projects">
-          <div className="space-y-12 w-full py-12">
-            <BlurFade delay={BLUR_FADE_DELAY * 11}>
-              <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                    My Projects
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Check out my latest work</h2>
-                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    I&apos;ve worked on a variety of projects, from simple websites to complex web applications. Here
-                    are a few of my favorites.
-                  </p>
-                </div>
-              </div>
-            </BlurFade>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-              {DATA.projects.map((project, id) => (
-                <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
-                  <ProjectCard
-                    href={project.href}
-                    key={project.title}
-                    title={project.title}
-                    description={project.description}
-                    dates={project.dates}
-                    tags={project.technologies}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </div>
-          </div>
-        </section>
-        <section id="research">
-          <div className="space-y-12 w-full py-12">
-            <BlurFade delay={BLUR_FADE_DELAY * 13}>
-              <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                    Research
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Conference presentations</h2>
-                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Research on computer vision and language models for real-time athletic form correction.
-                  </p>
-                </div>
-              </div>
-            </BlurFade>
-            <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-3">
-              {DATA.research.map((item, id) => (
-                <BlurFade key={item.title} delay={BLUR_FADE_DELAY * 14 + id * 0.05}>
-                  <Card className="border">
-                    <CardHeader className="space-y-2 p-4">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <Badge variant="secondary">{item.date}</Badge>
-                        <span className="text-xs text-muted-foreground">{item.venue}</span>
-                      </div>
-                      <CardTitle className="text-base leading-snug">{item.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="px-4 pb-4">
-                      <ul className="space-y-2 text-xs">
-                        {item.description.map((point) => (
-                          <li key={point} className="flex items-start">
-                            <span className="mr-2 mt-1 flex-shrink-0">•</span>
-                            <span className="leading-relaxed">{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </BlurFade>
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="contact">
-          <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-            <BlurFade delay={BLUR_FADE_DELAY * 16}>
-              <div className="space-y-3">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">Contact</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
-                <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Want to chat? Just email me at{" "}
-                  <Link href={`mailto:${DATA.contact.email}`} className="text-blue-500 hover:underline">
-                    {DATA.contact.email}
-                  </Link>{" "}
-                  and I&apos;ll respond whenever I can.
+      <section id="research" className="border-t border-[var(--line)] bg-[var(--ink)] text-white">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 md:py-28">
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/45">Research</p>
+            {DATA.research.map((item) => (
+              <div key={item.title} className="mt-5 max-w-3xl sm:mt-6">
+                <h2 className="font-display text-[1.65rem] leading-tight tracking-tight sm:text-3xl md:text-4xl">
+                  {item.title}
+                </h2>
+                <p className="mt-3 text-sm text-white/55 sm:mt-4">
+                  {item.date} · {item.venue}
                 </p>
+                <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-white/80 sm:mt-8 sm:text-base md:text-lg">
+                  {item.description.map((point) => (
+                    <p key={point}>{point}</p>
+                  ))}
+                </div>
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-7 inline-flex items-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[var(--ink)] sm:mt-8 sm:text-[15px]"
+                >
+                  View on IEEE Xplore
+                  <span aria-hidden="true" className="ml-1">
+                    ›
+                  </span>
+                </Link>
               </div>
-            </BlurFade>
-          </div>
-        </section>
-      </main>
-    </>
-  )
-}
+            ))}
+          </Reveal>
+        </div>
+      </section>
 
+      <section id="education" className="border-t border-[var(--line)] bg-[var(--surface)]">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 md:py-28">
+          <div className="grid gap-12 md:grid-cols-2 md:gap-16">
+            <Reveal>
+              <p className="section-kicker">Background</p>
+              <h2 className="font-display mt-3 text-3xl tracking-tight sm:text-4xl">Education</h2>
+              <ul className="mt-8 space-y-5 sm:mt-10 sm:space-y-8">
+                {DATA.education.map((school) => (
+                  <li key={school.school} className="rounded-2xl border border-[var(--line)] bg-white p-4 sm:p-5">
+                    <p className="text-base font-semibold tracking-tight sm:text-lg">{school.school}</p>
+                    <p className="mt-1 text-sm text-[var(--muted)]">{school.degree}</p>
+                    <p className="mt-1 text-sm text-[var(--muted)]">
+                      {school.start} – {school.end}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+            <Reveal delay={0.06}>
+              <p className="section-kicker">Toolkit</p>
+              <h2 className="font-display mt-3 text-3xl tracking-tight sm:text-4xl">Skills</h2>
+              <div className="mt-8 space-y-4 sm:mt-10 sm:space-y-6">
+                {DATA.skillGroups.map((group) => (
+                  <div
+                    key={group.category}
+                    className="rounded-2xl border border-[var(--line)] bg-white p-4 sm:p-5"
+                  >
+                    <h3 className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+                      {group.category}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--muted)] sm:text-[15px]">
+                      {group.items.join(" · ")}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="border-t border-[var(--line)]">
+        <Reveal className="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6 sm:py-24 md:py-32">
+          <p className="section-kicker mx-auto justify-center">Contact</p>
+          <h2 className="font-display mt-3 text-3xl tracking-tight sm:text-4xl md:text-6xl">Get in touch</h2>
+          <Link
+            href={`mailto:${DATA.contact.email}`}
+            className="mt-5 inline-block max-w-full break-all text-base font-medium text-[var(--ink)] transition-opacity hover:opacity-70 sm:mt-6 sm:text-lg"
+          >
+            {DATA.contact.email}
+          </Link>
+        </Reveal>
+      </section>
+
+      <footer className="border-t border-[var(--line)] px-4 py-8 text-center text-xs text-[var(--muted)] sm:px-6">
+        © {new Date().getFullYear()} {DATA.name} · {DATA.location}
+      </footer>
+    </main>
+  );
+}
