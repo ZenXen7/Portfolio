@@ -22,15 +22,15 @@ const fontDisplay = Sora({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    default: "Karl Christian Ajero | Software Developer",
+    template: `%s | Karl Christian Ajero`,
   },
   description: DATA.summary,
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
   openGraph: {
-    title: `${DATA.name}`,
+    title: "Karl Christian Ajero | Software Developer",
     description: DATA.summary,
     url: DATA.url,
     siteName: `${DATA.name}`,
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: "Karl Christian Ajero | Software Developer",
     card: "summary_large_image",
   },
   verification: {

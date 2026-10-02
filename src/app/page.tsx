@@ -235,20 +235,63 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="contact" className="border-t border-[var(--line)]">
-        <Reveal className="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6 sm:py-24 md:py-32">
-          <p className="section-kicker mx-auto justify-center">Contact</p>
-          <h2 className="font-display mt-3 text-3xl tracking-tight sm:text-4xl md:text-6xl">Get in touch</h2>
-          <Link
-            href={`mailto:${DATA.contact.email}`}
-            className="mt-5 inline-block max-w-full break-all text-base font-medium text-[var(--ink)] transition-opacity hover:opacity-70 sm:mt-6 sm:text-lg"
-          >
-            {DATA.contact.email}
-          </Link>
+      <section id="contact" className="border-t border-white/10 bg-[var(--ink)] text-white">
+        <Reveal className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24 md:py-28">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/45">
+              Contact
+            </p>
+            <h2 className="font-display mt-3 text-3xl tracking-tight sm:text-4xl md:text-5xl">
+              Get in touch
+            </h2>
+            <p className="mx-auto mt-3 max-w-md text-sm text-white/55 sm:text-base">
+              Open to roles, collaborations, and interesting problems.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-2xl gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4">
+            <Link
+              href={`mailto:${DATA.contact.email}`}
+              className="rounded-2xl border border-white/15 bg-white/[0.06] p-5 text-left transition-colors hover:border-white/35 hover:bg-white/[0.1]"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/45">
+                Email
+              </p>
+              <p className="mt-2 break-all text-sm font-semibold text-white sm:text-base">
+                {DATA.contact.email}
+              </p>
+            </Link>
+            <Link
+              href={`tel:${DATA.contact.telHref}`}
+              className="rounded-2xl border border-white/15 bg-white/[0.06] p-5 text-left transition-colors hover:border-white/35 hover:bg-white/[0.1]"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/45">
+                Phone
+              </p>
+              <p className="mt-2 text-sm font-semibold text-white sm:text-base">
+                {DATA.contact.tel}
+              </p>
+            </Link>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm font-semibold">
+            <Link
+              href={DATA.contact.social.GitHub.url}
+              className="rounded-full bg-white px-4 py-2 text-[var(--ink)] transition-opacity hover:opacity-90"
+            >
+              GitHub
+            </Link>
+            <Link
+              href={DATA.contact.social.LinkedIn.url}
+              className="rounded-full border border-white/25 px-4 py-2 text-white transition-colors hover:border-white/50 hover:bg-white/10"
+            >
+              LinkedIn
+            </Link>
+          </div>
         </Reveal>
       </section>
 
-      <footer className="border-t border-[var(--line)] px-4 py-8 text-center text-xs text-[var(--muted)] sm:px-6">
+      <footer className="border-t border-white/10 bg-[var(--ink)] px-4 py-8 text-center text-xs text-white/40 sm:px-6">
         © {new Date().getFullYear()} {DATA.name} · {DATA.location}
       </footer>
     </main>

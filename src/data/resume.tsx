@@ -50,7 +50,8 @@ export const DATA = {
   ],
   contact: {
     email: "karlchristianajero@gmail.com",
-    tel: "09155483788",
+    tel: "+63 915 548 3788",
+    telHref: "+639155483788",
     social: {
       GitHub: {
         name: "GitHub",
