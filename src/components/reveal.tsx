@@ -1,43 +1,40 @@
 "use client";
 
+import { softSpring } from "@/lib/motion";
 import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { motion, useReducedMotion, type Variants } from "motion/react";
+import type { ReactNode } from "react";
 
 type RevealProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
+  y?: number;
 };
 
-export function Reveal({ children, className, delay = 0 }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+const variants: Variants = {
+  hidden: (distance: number) => ({ opacity: 0, y: distance }),
+  visible: { opacity: 1, y: 0 },
+};
 
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
+export function Reveal({ children, className, delay = 0, y = 28 }: RevealProps) {
+  const reduceMotion = useReducedMotion();
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
+  if (reduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
-    <div
-      ref={ref}
-      className={cn("reveal", visible && "reveal-visible", className)}
-      style={delay ? { transitionDelay: `${delay}s` } : undefined}
+    <motion.div
+      className={cn(className)}
+      custom={y}
+      variants={variants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.15, margin: "0px 0px -8% 0px" }}
+      transition={{ ...softSpring, delay }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

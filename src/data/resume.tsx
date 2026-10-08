@@ -4,6 +4,7 @@ export const DATA = {
   name: "Karl Christian Ajero",
   initials: "KC",
   url: "https://github.com/ZenXen7",
+  githubUsername: "ZenXen7",
   location: "Cebu City",
   locationLink: "https://www.google.com/maps/place/Cebu+City",
   description: "Full Stack Developer",
@@ -15,35 +16,48 @@ export const DATA = {
   skillGroups: [
     {
       category: "Languages",
-      items: ["TypeScript", "JavaScript", "Python", "Java", "Swift"],
+      items: ["TypeScript", "JavaScript", "Python", "Java", "Swift", "SQL"],
     },
     {
-      category: "Web",
+      category: "Web & Mobile",
       items: [
         "React",
         "Next.js",
+        "React Native",
+        "Expo",
         "Angular",
-        "AngularJS",
         "Vue.js",
         "Node.js",
         "Express.js",
         "NestJS",
         "Django",
         "FastAPI",
+        "Flutter",
       ],
     },
     {
-      category: "Desktop / Mobile",
-      items: ["React Native", "Expo", "Android Studio", "Swift", "Flutter"],
-    },
-    {
       category: "Data",
-      items: ["MongoDB", "MySQL", "PostgreSQL", "Supabase", "Firebase"],
+      items: ["MongoDB", "MySQL", "PostgreSQL", "Supabase", "Firebase", "SQLite"],
     },
     {
-      category: "Infrastructure",
-      items: ["GCP", "AWS", "Railway", "GitHub Actions", "CI/CD"],
+      category: "Cloud / Infra",
+      items: [
+        "GCP",
+        "AWS",
+        "Railway",
+        "Vercel",
+        "Docker",
+        "GitHub Actions",
+        "CI/CD",
+        "Git",
+      ],
     },
+  ],
+  certificates: [
+    "AWS Cloud Academy Graduate – Cloud Architect",
+    "AWS Cloud Academy Graduate – Cloud Foundations",
+    "Korea Test of Practical Competency in ICT (TOPCIT) – Level III Industry Standard",
+    "ZUITT Learning Institute Incorporated – Javascript Elective Course",
   ],
   navbar: [
     { href: "/", icon: Icons.globe, label: "Home" },
@@ -175,19 +189,38 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "HealthBook",
+      category: "Web",
+      href: "https://github.com/fynn07/healthcare-management-system",
+      dates: "2024",
+      active: true,
+      description:
+        "A digital healthcare identification and medical records platform for patients, providers, and administrators. Features digital IDs, medication history, intelligent patient search, QR sharing, and PDF export of medical records.",
+      technologies: ["Django", "JavaScript", "HTML/CSS", "PostgreSQL", "SQLite"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/fynn07/healthcare-management-system",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/healthbook-web.png",
+      video: "",
+    },
+    {
       title: "WildChats",
+      category: "Web",
       href: "https://wildchats-1.onrender.com",
       dates: "March 2025 - April 2025",
       active: true,
       description:
-        "WildChats is a real-time chat application built for Cebu Institute of Technology - University (CIT-U) students, also known as Wildcats! This platform enables seamless communication among students, faculty, and organizations, providing a modern and secure chatting experience.",
+        "Real-time chat for CIT-U Wildcats — seamless communication among students, faculty, and organizations with a modern, secure messaging experience.",
       technologies: [
         "React + Vite",
         "MongoDB",
         "Node.js",
         "Express.js",
         "TailwindCSS",
-        "DaisyUI",
         "Socket.io",
       ],
       links: [
@@ -206,35 +239,13 @@ export const DATA = {
       video: "",
     },
     {
-      title: "AgriVision",
-      href: "https://github.com/ZenXen7/AgriVision",
-      dates: "March 2025 - March 2025",
-      active: true,
-      description:
-        "AgriVision is a mobile application that utilizes deep learning and computer vision to detect lettuce diseases from images.",
-      technologies: [
-        "React Native",
-        "NativeWind",
-        "MERN Stack",
-        "Machine Learning",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/ZenXen7/AgriVision",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/agri.png",
-      video: "",
-    },
-    {
       title: "ShrimpSense",
+      category: "Web",
       href: "https://github.com/ZenXen7/Shrimpsense",
       dates: "January 2025 - February 2025",
       active: true,
       description:
-        "Monitor, predict, and optimize shrimp farming with data-driven insights and real-time analytics. ShrimpSense ensures optimal water quality, disease prevention, and farm efficiency using AI-powered technology.",
+        "Monitor, predict, and optimize shrimp farming with data-driven insights and real-time analytics for water quality, disease prevention, and farm efficiency.",
       technologies: ["Next.js", "TailwindCSS", "ShadCN UI"],
       links: [
         {
@@ -252,48 +263,56 @@ export const DATA = {
       video: "",
     },
     {
-      title: "HealthBook - App",
+      title: "HealthBook App",
+      category: "Mobile",
       href: "https://github.com/ZenXen7/HBReactNative",
       dates: "October 2024 - December 2024",
       active: true,
       description:
-        "Welcome to Healthbook — a cutting-edge digital health tracker designed to manage and monitor your complete medical history all in one place! Whether it's vaccination records, prescriptions, or family health details, Healthbook is your go-to app for simplifying your healthcare management.",
+        "Mobile companion for HealthBook — manage vaccination records, prescriptions, and family health details on the go with seamless sync to the web platform.",
       technologies: ["React Native", "NativeWind", "Appwrite", "Expo"],
       links: [
         {
-          type: "Website",
+          type: "Source",
           href: "https://github.com/ZenXen7/HBReactNative",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/hb-app.png",
       video: "",
     },
     {
-      title: "Lersch Grossman Algorithm Visualizer",
-      href: "https://github.com/ZenXen7/Lerch-Grossman-Visualization",
-      dates: "October 2024 - December 2024",
+      title: "AgriVision",
+      category: "Mobile",
+      href: "https://github.com/ZenXen7/AgriVision",
+      dates: "March 2025",
       active: true,
       description:
-        "A lerch grossman algorithm visualizer built using Java and JavaFX. This aims to provide a visualizer for this specific algorithm using JavaFX for mining Engineers.",
-      technologies: ["Java", "JavaFX"],
+        "Mobile app that uses deep learning and computer vision to detect lettuce diseases from images.",
+      technologies: [
+        "React Native",
+        "NativeWind",
+        "MERN Stack",
+        "Machine Learning",
+      ],
       links: [
         {
           type: "Source",
-          href: "https://github.com/ZenXen7/Lerch-Grossman-Visualization",
+          href: "https://github.com/ZenXen7/AgriVision",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/lerch.png",
+      image: "/agri.png",
       video: "",
     },
     {
       title: "TeknoLost",
+      category: "Mobile",
       href: "https://github.com/ZenXen7/TeknoLost",
       dates: "October 2024 - December 2024",
       active: true,
       description:
-        "A lost and found mobile application developed as part of my 2nd-year project at CIT-U. Build using Android Studio, Java and Firebase for backend. The app aims to streamline the process of reporting and recovering lost objects.",
+        "Lost-and-found mobile app for CIT-U — streamline reporting and recovering lost items with Firebase-backed workflows.",
       technologies: ["Java", "Android Studio", "Firebase"],
       links: [
         {
@@ -303,6 +322,25 @@ export const DATA = {
         },
       ],
       image: "/teknolost.png",
+      video: "",
+    },
+    {
+      title: "Lerch-Grossman Visualizer",
+      category: "Web",
+      href: "https://github.com/ZenXen7/Lerch-Grossman-Visualization",
+      dates: "October 2024 - December 2024",
+      active: true,
+      description:
+        "Desktop visualizer for the Lerch-Grossman algorithm, built for mining engineering workflows with JavaFX.",
+      technologies: ["Java", "JavaFX"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ZenXen7/Lerch-Grossman-Visualization",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/lerch.png",
       video: "",
     },
   ],

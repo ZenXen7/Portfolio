@@ -89,33 +89,29 @@
     background: #111111;
   }
 
-  .reveal {
-    opacity: 0;
-    transform: translate3d(0, 16px, 0);
-    transition:
-      opacity 0.55s ease,
-      transform 0.55s ease;
+  .projects-scroller {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .reveal-visible {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
+  .projects-scroller::-webkit-scrollbar {
+    display: none;
   }
 
   .project-card {
-    transition: border-color 0.2s ease;
+    transition:
+      border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .project-card:hover {
     border-color: #bdbdbd;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
   }
 
   .section-kicker {

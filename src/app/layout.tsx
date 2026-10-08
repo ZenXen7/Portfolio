@@ -1,3 +1,4 @@
+import { MotionProvider } from "@/components/motion-provider";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,12 +11,14 @@ import "./globals.css";
 const fontSans = IBM_Plex_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+  display: "swap",
   variable: "--font-sans",
 });
 
 const fontDisplay = Sora({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
+  display: "swap",
   variable: "--font-display",
 });
 
@@ -72,19 +75,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body
-        className={cn(
-          "min-h-screen bg-[var(--page)] font-sans text-[var(--ink)] antialiased",
-          fontSans.variable,
-          fontDisplay.variable
-        )}
-      >
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn("scroll-smooth", fontSans.variable, fontDisplay.variable)}
+    >
+      <body className="min-h-screen bg-[var(--page)] font-sans text-[var(--ink)] antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <TooltipProvider delayDuration={0}>
-            <Navbar />
-            {children}
-          </TooltipProvider>
+          <MotionProvider>
+            <TooltipProvider delayDuration={0}>
+              <Navbar />
+              {children}
+            </TooltipProvider>
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

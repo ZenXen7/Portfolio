@@ -1,16 +1,19 @@
 "use client";
 
 import { DATA } from "@/data/resume";
+import { snappySpring } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/#work", label: "Work" },
+  { href: "/#work", label: "Experience" },
   { href: "/#projects", label: "Projects" },
+  { href: "/#activity", label: "Activity" },
+  { href: "/#credentials", label: "Certificates" },
   { href: "/#research", label: "Research" },
-  { href: "/#education", label: "Background" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -25,7 +28,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--page)] shadow-[0_1px_0_rgba(0,0,0,0.04)]">
+    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--page)]/90 shadow-[0_1px_0_rgba(0,0,0,0.04)] backdrop-blur-md">
       <nav className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
           href="/"
@@ -62,25 +65,39 @@ export default function Navbar() {
         </button>
       </nav>
 
-      <div
-        className={cn(
-          "border-t border-[var(--line)] bg-[var(--page)] md:hidden",
-          open ? "block" : "hidden"
-        )}
-      >
-        <div className="mx-auto flex max-w-5xl flex-col gap-1 px-4 py-3">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-xl px-3 py-3 text-sm font-medium text-[var(--ink)] transition-colors hover:bg-[var(--surface)]"
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </div>
+      <AnimatePresence initial={false}>
+        {open ? (
+          <motion.div
+            key="mobile-nav"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={snappySpring}
+            className="overflow-hidden border-t border-[var(--line)] bg-[var(--page)] md:hidden"
+          >
+            <div className="mx-auto flex max-w-5xl flex-col gap-1 px-4 py-3">
+              {links.map((link, index) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: -8 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ ...snappySpring, delay: 0.04 * index }}
+                >
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      "block rounded-xl px-3 py-3 text-sm font-medium text-[var(--ink)] transition-colors hover:bg-[var(--surface)]"
+                    )}
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </header>
   );
 }
